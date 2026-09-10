@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorando Métodos Privados no Python</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 { color: #3b5998; }
-        .destaque {
-            background-color: #e7f3fe;
-            border-left: 6px solid #2196F3;
-            padding: 10px;
-            margin: 15px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Explorando Métodos Privados no Python</title>
+  <!-- Tema escuro do Prism.js semelhante aos blocos do GitHub -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #24292e;
+    }
+    code[class*="language-"], pre[class*="language-"] {
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Trabalho de Introdução à Programação</h1>
-        <p>Este repositório armazena os dados estruturados para o sistema em Python.</p>
-        
-        <!-- O Python vai buscar especificamente esta Tag via ID -->
-        <div id="conteudo-privado" class="destaque">
-            <p><strong>Dados Confidenciais:</strong> O acesso a este parágrafo foi processado por um método privado em Python para garantir o encapsulamento.</p>
-        </div>
-    </div>
+
+  <h1>Explorando Métodos Privados no Python</h1>
+  <p>No Python, o encapsulamento é atingido principalmente via convenções de código e Name Mangling.</p>
+
+  <h2>Exemplo de Código</h2>
+  <pre><code class="language-python">
+class Dispositivo:
+    def __init__(self, nome):
+        self.nome = nome
+
+    # Convenção: Uso interno
+    def _conectar_rede(self):
+        print("Conectando...")
+
+    # Name Mangling: Dificulta acesso externo
+    def __autenticar(self):
+        print("Autenticando credenciais...")
+  </code></pre>
+
+  <!-- Script para colorir o código -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>
