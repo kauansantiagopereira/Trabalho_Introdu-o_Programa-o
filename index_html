@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando Métodos Privados no Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #3b5998; }
+        .destaque {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trabalho de Introdução à Programação</h1>
+        <p>Este repositório armazena os dados estruturados para o sistema em Python.</p>
+        
+        <!-- O Python vai buscar especificamente esta Tag via ID -->
+        <div id="conteudo-privado" class="destaque">
+            <p><strong>Dados Confidenciais:</strong> O acesso a este parágrafo foi processado por um método privado em Python para garantir o encapsulamento.</p>
+        </div>
+    </div>
+</body>
+</html>
